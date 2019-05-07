@@ -118,7 +118,7 @@ jobs:
           command: |
             sudo apt-get install make gcc maven openjdk-8-jdk flex pkg-config libmpfr-dev autoconf libtool pandoc zlib1g-dev z3 libz3-dev
             git clone https://github.com/dapphub/klab.git
-            cd klab && git checkout 440484fe0a69e4de5eeb58a0a5b60c1c7aab74a8 && make deps && sudo make link
+            cd klab && make deps && sudo make link
             export PATH=$PATH:/usr/local/bin
             export KLAB_EVMS_PATH=/home/circleci/project/klab/evm-semantics
             export TMPDIR=/tmp
